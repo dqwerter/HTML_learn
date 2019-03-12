@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="John Doe">
+    <meta http-equiv="refresh" content="30">
+</head>
+<body>
+
+<h2>Using The class Attribute in JavaScript</h2>
+<p>Click the button, to hide all elements with the class name "city", with JavaScript:</p>
+
+<button onclick="myFunction()">Hide elements</button>
+
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementsByClassName("city");
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+    }
+</script>
+
+<h1 id="myHeader">Hello World!</h1>
+<button onclick="displayResult()">Change text</button>
+
+<script>
+    function displayResult() {
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+    }
+</script>
+<br><br>
+<iframe src="https://www.baidu.com/" style="height: 300px; width: 60%;"></iframe> <br>
+<iframe src="https://www.baidu.com/" style="height: 300px; width: 60%; border: none"></iframe> <br>
+<iframe src="https://www.baidu.com/" name="iframe_a"></iframe> <br>
+<a href="https://www.baidu.com/s?wd=%E4%BD%A0%E5%A5%BD" target="iframe_a">Magic handle. </a> <br><br>
+
+
+<button type="button"
+        onclick="document.getElementById('demo_01').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+
+<p id="demo_01"></p> <br><br>
+
+<h2>Use JavaScript to Change Text</h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+<p id="demo_02"></p> <br><br>
+
+<script>
+    document.getElementById("demo_02").innerHTML = "Hello JavaScript!";
+</script>
+
+<h1>My First JavaScript</h1>
+
+<p>JavaScript can change the content of an HTML element:</p>
+
+<button type="button" onclick="myFunction_03()">Click Me!</button>
+
+<p id="demo_03">This is a demonstration.</p> <br><br>
+
+<script>
+    function myFunction_03() {
+        document.getElementById("demo_03").innerHTML = "Hello JavaScript!";
+    }
+</script>
+
+<p id="demo_04">JavaScript can change the style of an HTML element.</p>
+
+<script>
+    function myFunction_04() {
+        document.getElementById("demo_04").style.fontSize = "25px";
+        document.getElementById("demo_04").style.color = "tomato";
+    }
+</script>
+
+<button type="button" onclick="myFunction_04()">Click Me!</button> <br><br>
+
+
+<script>
+    function light(sw) {
+        var pic;
+        if (sw == 0) {
+            pic = "https://www.w3schools.com/html/pic_bulboff.gif"
+        } else {
+            pic = "https://www.w3schools.com/html/pic_bulbon.gif"
+        }
+        document.getElementById('myImage').src = pic;
+    }
+</script>
+
+<img id="myImage" src="https://www.w3schools.com/html/pic_bulboff.gif" width="100" height="180">
+
+<p>
+    <button type="button" onclick="light(1)">Light On</button>
+    <button type="button" onclick="light(0)">Light Off</button>
+</p>
+
+
+<p id="demo_05"></p>
+
+<script>
+    document.getElementById("demo_05").innerHTML = "Hello JavaScript!";
+</script>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+
+</body>
+</html>

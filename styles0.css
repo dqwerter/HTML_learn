@@ -1,0 +1,36 @@
+body {
+    background-color: powderblue;
+}
+h1   {
+    color: tomato;
+    border: 1px solid white;
+    padding: 200px;
+    margin: 10px;
+}
+p    {
+    color: darkblue;
+}
+#unique {
+    text-align: center;
+    color: aquamarine;
+}
+p.class {
+    color: chocolate;
+}
+a:link, a:visited{
+    color: white;
+    background-color: #f44336;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover, a:active {
+    background-color: red;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
