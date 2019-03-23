@@ -1,62 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing:border-box;
-        }
+  <title>Viewport & Responsive Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing:border-box;
+    }
 
-        .left {
-            background-color:#2196F3;
-            padding:20px;
-            float:left;
-            width:20%; /* The width is 20%, by default */
-        }
+    .left {
+      background-color:#2196F3;
+      padding:20px;
+      float:left;
+      width:20%; /* The width is 20%, by default */
+    }
 
-        .main {
-            background-color:#f1f1f1;
-            padding:20px;
-            float:left;
-            width:60%; /* The width is 60%, by default */
-        }
+    .main {
+      background-color:#f1f1f1;
+      padding:20px;
+      float:left;
+      width:60%; /* The width is 60%, by default */
+    }
 
-        .right {
-            background-color:#4CAF50;
-            padding:20px;
-            float:left;
-            width:20%; /* The width is 20%, by default */
-        }
+    .right {
+      background-color:#4CAF50;
+      padding:20px;
+      float:left;
+      width:20%; /* The width is 20%, by default */
+    }
 
-        /* Use a media query to add a break point at 800px: */
-        @media screen and (max-width:800px) {
-            .left, .main, .right {
-                width:100%; /* The width is 100%, when the viewport is 800px or smaller */
-            }
-        }
-    </style>
+    /* Use a media query to add a break point at 800px: */
+    @media screen and (max-width:800px) {
+      .left, .main, .right {
+        width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+      }
+    }
+  </style>
 </head>
 <body>
 
 <h2>Responsive Image</h2>
 <p>When the CSS width property is set in a percentage value, the image will scale up and down when resizing the browser window. Resize the browser window to see the effect.</p>
 
-<img src="https://www.w3schools.com/html/img_girl.jpg" style="width:100%;"><br>
+<img src="https://www.w3schools.com/html/img_girl.jpg" style="width:100%;" alt="image of a girl"/><br>
 
 <h2>Responsive Image</h2>
 <p>"max-width:100%" prevents the image from getting bigger than its original size. However, if you make the browser window smaller, the image will still scale down.</p>
 <p>Resize the browser window to see the effect.</p>
-<img src="https://www.w3schools.com/html/img_girl.jpg" style="max-width:100%;height:auto;"><br>
+<img src="https://www.w3schools.com/html/img_girl.jpg" style="max-width:100%;height:auto;" alt="Image of a girl"/><br>
 
 <h2>Show Different Images Depending on Browser Width</h2>
 <p>Resize the browser width and the image will change at 600px and 1500px.</p>
 
 <picture>
-    <source srcset="https://www.w3schools.com/html/img_smallflower.jpg" media="(max-width: 600px)">
-    <source srcset="https://www.w3schools.com/html/img_flowers.jpg" media="(max-width: 1500px)">
-    <source srcset="https://www.w3schools.com/html/flowers.jpg">
-    <img src="https://www.w3schools.com/html/img_flowers.jpg" alt="Flowers" style="width:auto;">
+  <source srcset = "https://www.w3schools.com/html/img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset = "https://www.w3schools.com/html/img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset = "https://www.w3schools.com/html/flowers.jpg">
+  <img src="https://www.w3schools.com/html/img_flowers.jpg" alt="Flowers" style="width:auto;">
 </picture>
 
 <h1 style="font-size:6vw;">Responsive Text</h1>
@@ -70,15 +71,15 @@
 <p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
 
 <div class="left">
-    <p>Left Menu</p>
+  <p>Left Menu</p>
 </div>
 
 <div class="main">
-    <p>Main Content</p>
+  <p>Main Content</p>
 </div>
 
 <div class="right">
-    <p>Right Content</p>
+  <p>Right Content</p>
 </div>
 
 
