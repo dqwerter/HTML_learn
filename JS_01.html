@@ -5,6 +5,163 @@
   <title>Title</title>
 </head>
 <body>
+<h1>JavaScript HOME</h1>
+<h2>My first JavaScript</h2>
+<button type="button" onclick="document.getElementById('dateTimeDisplay').innerHTML=Date()">
+  Click me to display date and time.
+</button>
+<p id="dateTimeDisplay"></p>
 
+<h1>JS Introduction</h1>
+<h2 id="toHide">What can JavaScript do? Can you change me?</h2>
+<p>JavaScript can change HTML attribute values.<p>
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+<button onclick="document.getElementById('lightBulb').src='https://www.w3schools.com/js/pic_bulbon.gif'">
+  Turn on the light</button>
+<img src="https://www.w3schools.com/js/pic_bulboff.gif" id="lightBulb">
+<button onclick="document.getElementById('lightBulb').src='https://www.w3schools.com/js/pic_bulboff.gif'">
+  Turn off the light</button><br/>
+<button onclick="document.getElementById('toHide').style.fontSize='30px'">Set font size</button><br/>
+<button onclick="document.getElementById('toHide').style.display='none'">Hide element</button><br/>
+<button onclick="document.getElementById('toHide').style.display='block'">Undo hide element</button><br/>
+
+<h1>JS Where TO</h1>
+<p id="p1">Paragraph to manipulate. </p>
+<script>
+  document.getElementById("p1").innerHTML = "My First JavaScript";
+</script>
+<h2>A Web Page</h2>
+<p id="p2">A paragraph</p>
+<button type="button" onclick="changeParagraph()">Change paragraph</button>
+<button type="button" onclick="changeParagraphExternal()">Change paragraph external</button>
+<script src="externalJS.js">
+  // Head or body are both okay
+  function changeParagraph() {
+    document.getElementById("p2").innerHTML = "Paragraph changed.";
+  }
+</script>
+
+<h1>JS Output</h1>
+<!--innerHTML document.write() window.alert() window.alert() console.log()-->
+<h2>My First Web Page</h2>
+<p>My first paragraph.</p>
+<button onclick="document.write('XD')">document.write()</button><br/>
+<script>
+  document.write("XD");
+</script>
+<button onclick="window.alert('XD!')">window.alert()</button><br/>
+<button onclick="console.log('XD')">console.alert()</button><br/>
+
+<h1>JS Statements</h1>
+
+<h1>JS Syntax</h1>
+
+<h1>JS Comments</h1>
+
+<h1>JS Variables</h1>
+<p>JavaScript variables are containers for storing data values.</p>
+<p>JavaScript identifiers are case-sensitive.</p>
+<p>It's a good programming practice to declare all variables at the beginning of a script.</p>
+<p>If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.</p>
+<p id="p3"></p>
+<p id="p4"></p>
+<script>
+  const person = "John Does",
+      carName = "Volvo",
+      price = 200;
+  document.getElementById("p3").innerHTML = person + " " + carName + " " + price;
+  // why #p3 is empty when two statements bellow is uncommented
+  // let reDeclare = "first";
+  // let reDeclare;
+  // document.getElementById("p3").innerHTML = reDeclare;
+  const strWithNumber = "5" + 4 + 3;
+  document.getElementById("p4").innerHTML = strWithNumber;
+</script>
+
+<h1>JS Operators</h1>
+<p id="p5"></p>
+<p>===	equal value and equal type<br/>!==	not equal value or not equal type</p>
+<script>
+  let strIncrement = "What a";
+  strIncrement += " nice day!";
+  document.getElementById("p5").innerHTML = strIncrement;
+</script>
+
+<h1>JavaScript Assignment</h1>
+
+<h1>JS Data Types</h1>
+<p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+<p id="p6"></p>
+<p id="p7"></p>
+<p id="p8"></p>
+<p id="p9"></p>
+<p id="p10"></p>
+<p id="p11"></p>
+<p id="p12"></p>
+<p id="p13"></p>
+<script>
+  var numbersPlusStr = 16 + 4 + "Volvo";
+  document.getElementById("p6").innerHTML = numbersPlusStr;
+  var carsArray = ["Saab", "Volvo", "BMW"];
+  document.getElementById("p7").innerHTML = carsArray;
+  let personObjects = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+  document.getElementById("p8").innerHTML = personObjects;            //[object Object]
+  document.getElementById("p9").innerHTML = typeof personObjects;     // object
+  personObjects = null;
+  document.getElementById("p10").innerHTML = typeof personObjects;    // object
+  personObjects = "";
+  document.getElementById("p11").innerHTML = typeof personObjects;    // string
+  personObjects = null;
+  document.getElementById("p12").innerHTML = typeof personObjects;    // object
+  personObjects = undefined;
+  document.getElementById("p13").innerHTML = typeof personObjects;    // undefined
+</script>
+<pre>
+  typeof undefined           // undefined
+  typeof null                // object
+  null === undefined         // false
+  null == undefined          // true
+</pre>
+
+<h1>JS Function</h1>
+<p id="p14"></p>
+<p id="p15"></p>
+<script>
+  function dummyFunc(){
+    return 1;
+  }
+  document.getElementById("p14").innerHTML = dummyFunc;
+  document.getElementById("p15").innerHTML = dummyFunc();
+</script>
+
+<h1>JS Objects</h1>
+<p id="p16">p16</p>
+<p id="p17">p17</p>
+<script>
+  let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+    fullName : function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+  document.getElementById("p16").innerHTML = person.lastName;       // no response
+  document.getElementById("p17").innerHTML = person["lastName"];
+</script>
+
+<h1>JS Events</h1>
+<button onclick="this.innerHTML = Date()">The time is?</button>
+
+<h1>JS Strings</h1>
+<p id="p18"></p>
+<p id="p19"></p>
+<script>
+  var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  document.getElementById("p18").innerHTML = abc.length;
+</script>
+
+<script src="https://www.w3schools.com/js/myScript1.js">// external references</script>
 </body>
 </html>
