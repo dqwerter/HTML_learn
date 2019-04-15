@@ -157,10 +157,60 @@
 <h1>JS Strings</h1>
 <p id="p18"></p>
 <p id="p19"></p>
+<p id="p20"></p>
 <script>
-  var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const backslash = "The character \\ is called backslash. " +
+  "Break into two lines. ";
   document.getElementById("p18").innerHTML = abc.length;
+  document.getElementById("p19").innerHTML = backslash;
+  const x = "John";
+  const y = new String("John");
+  const z = new String("John");
+  // x == y   true
+  // x === y; false
+  // y == z;  false: different objects
 </script>
+
+<h1>JS String methods</h1>
+<p id="p21"></p>
+<p id="p22"></p>
+<p id="p23"></p>
+<script>
+  const indexofMethod = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let index = lastindexofMethod.lastIndexOf("Q");
+</script>
+
+<h1>JS Numbers</h1>
+<p id="p24"></p>
+<script>
+  typeof NaN;   // type of NaN is a number
+  const myNumber = 32;
+  myNumber.toString(10);  // returns 32
+  myNumber.toString(32);  // returns 10
+  myNumber.toString(16);  // returns 20
+  myNumber.toString(8);   // returns 40
+  myNumber.toString(2);   // returns 100000
+</script>
+
+<h1>JS Arrays</h1>
+<p>Arrays are a special kind of objects, with numbered indexes. </p>
+<script>
+  let personArray = ["John", "Doe", 46];
+  let personObject = {firstName:"John", lastName:"Doe", age:46};
+</script>
+
+<h1>JS Array Sort</h1>
+<script>
+  let points = [40, 100, 1, 5, 25, 10];
+  points.sort(function(a, b){return a - b});    // a compare function, sort ascending
+  points.sort(function(a, b){return b - a});    // a compare function, sort descending
+</script>
+
+
+
+
+
 
 <script src="https://www.w3schools.com/js/myScript1.js">// external references</script>
 </body>
