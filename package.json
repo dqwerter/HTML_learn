@@ -2,6 +2,7 @@
   "name": "playground",
   "version": "1.0.0",
   "dependencies": {
-    "upper-case": "latest"
+    "upper-case": "latest",
+    "formidable": "latest"
   }
 }
