@@ -1,0 +1,1 @@
+First hello world from fs.writeFile().  
